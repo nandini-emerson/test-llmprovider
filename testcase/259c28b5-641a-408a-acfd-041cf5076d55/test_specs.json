@@ -1,0 +1,14 @@
+{
+  "name": "test_rate_limiting",
+  "description": "Verify agent respects rate limits",
+  "test_type": "security",
+  "input": "100 requests in rapid succession",
+  "output": "agent should enforce rate limits",
+  "success_criteria": [
+    "Requests after limit are rejected",
+    "Clear rate limit error message",
+    "After cooldown period, requests succeed",
+    "Rate limit headers are present"
+  ],
+  "error_scenarios": null
+}
