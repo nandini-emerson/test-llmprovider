@@ -1,0 +1,14 @@
+{
+  "name": "test_resource_exhaustion_protection",
+  "description": "Verify agent protects against resource exhaustion attacks",
+  "test_type": "security",
+  "input": "requests designed to consume excessive memory/CPU",
+  "output": "agent should limit resource usage",
+  "success_criteria": [
+    "Memory usage is bounded",
+    "CPU usage doesn't exceed limits",
+    "Request is rejected or throttled",
+    "System remains responsive"
+  ],
+  "error_scenarios": null
+}
