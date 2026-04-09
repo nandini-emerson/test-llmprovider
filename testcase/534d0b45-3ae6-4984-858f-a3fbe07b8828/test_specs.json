@@ -1,0 +1,14 @@
+{
+  "name": "test_authentication_bypass_prevention",
+  "description": "Verify agent properly validates authentication tokens",
+  "test_type": "security",
+  "input": "malformed or expired token",
+  "output": "agent should reject request",
+  "success_criteria": [
+    "Invalid tokens are rejected",
+    "Expired tokens are rejected",
+    "Status code 401 Unauthorized",
+    "No sensitive data leaked in error"
+  ],
+  "error_scenarios": null
+}
