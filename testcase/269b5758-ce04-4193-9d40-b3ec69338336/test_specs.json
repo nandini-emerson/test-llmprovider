@@ -1,0 +1,13 @@
+{
+  "name": "test_null_payload_handling",
+  "description": "Verify agent handles null/None values safely",
+  "test_type": "functional",
+  "input": "payload = None or request body = null",
+  "output": "agent should return validation error",
+  "success_criteria": [
+    "No uncaught exceptions",
+    "Validation error is clear",
+    "Status code 400 Bad Request"
+  ],
+  "error_scenarios": null
+}
