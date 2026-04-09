@@ -1,0 +1,14 @@
+{
+  "name": "test_sql_injection_prevention",
+  "description": "Verify agent prevents SQL injection attacks",
+  "test_type": "security",
+  "input": "user_id = \"1; DROP TABLE users; --\"",
+  "output": "agent should safely handle malicious input",
+  "success_criteria": [
+    "Input is properly parameterized",
+    "No database modification occurs",
+    "Malicious intent is logged",
+    "Safe error message returned to user"
+  ],
+  "error_scenarios": null
+}
