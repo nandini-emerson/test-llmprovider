@@ -1,0 +1,18 @@
+{
+  "name": "test_very_long_input",
+  "description": "Verify agent handles extremely long input without crashing",
+  "test_type": "security",
+  "input": "user_message = 'A' * 100000  # 100k characters",
+  "output": "agent should handle gracefully or reject with informative error",
+  "success_criteria": [
+    "Agent doesn't crash or hang",
+    "Response time is reasonable (< 10s)",
+    "Memory usage remains acceptable",
+    "User gets informative feedback"
+  ],
+  "error_scenarios": [
+    "Input exceeds max length",
+    "Memory overflow attempt",
+    "Performance degradation"
+  ]
+}
